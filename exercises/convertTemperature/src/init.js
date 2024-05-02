@@ -2,7 +2,9 @@ import {
   SPACE_REGEX,
   TEMPERATURES_INPUT,
   CONVERT_TEMPERATURE_CONTAINER,
+  MESSAGE_ERROR_NOT_INTEGER,
 } from './data/constants.js';
+import { replacePlaceholders } from './utils/strings.js';
 
 document
   .getElementById(TEMPERATURES_INPUT)
@@ -23,7 +25,7 @@ document
     if (fahrenheitTextList) {
       if (!/^[0-9\s]*$/.test(fahrenheitTextList)) {
         window.alert(
-          `The '${fahrenheitTextList}' contains values different of integer numbers`,
+          replacePlaceholders(MESSAGE_ERROR_NOT_INTEGER, fahrenheitTextList),
         );
         return;
       }
