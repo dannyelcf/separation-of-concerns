@@ -1,38 +1,41 @@
 debugger; // once when the program is initialized
+import listener from './listener.js';
 
-document.getElementById('temperatures').addEventListener('change', (event) => {
-  debugger; // each time the user changes the 'temperatures' input
+listener();
 
-  const convertedTemperaturesContainer = document.getElementById(
-    'convertedTemperatures',
-  );
+// document.getElementById(TEMPERATURE_INPUT).addEventListener('change', (event) => {
+//   debugger; // each time the user changes the 'temperatures' input
 
-  // Erase previous content
-  convertedTemperaturesContainer.innerHTML = '';
+//   const convertedTemperaturesContainer = document.getElementById(
+//     CONVERT_TEMPERATURE_CONTAINER
+//   );
 
-  // Get the text input
-  const fahrenheitTextList = event.target.value;
+//   // Erase previous content
+//   convertedTemperaturesContainer.innerHTML = '';
 
-  // Validade it
-  if (fahrenheitTextList) {
-    if (!/^[0-9\s]*$/.test(fahrenheitTextList)) {
-      window.alert(
-        `The '${fahrenheitTextList}' contains values different of integer numbers`,
-      );
-    }
+//   // Get the text input
+//   const fahrenheitTextList = event.target.value;
 
-    // Sanitize it
-    const fahrenheitList = fahrenheitTextList.trim().split(/\s+/);
+//   // Validate it
+//   if (fahrenheitTextList) {
+//     if (!/^[0-9\s]*$/.test(fahrenheitTextList)) {
+//       window.alert(
+//         MESSAGE_ERROR_NOT_INTEGER,
+//       );
+//     }
 
-    fahrenheitList.forEach((fahrenheit) => {
-      // Do the math
-      const celsius = ((fahrenheit - 32) * 5) / 9;
+//     // Sanitize it
+//     const fahrenheitList = fahrenheitTextList.trim().split(SPACE);
 
-      // Render the result
-      const liString = `<li class="number-item">${celsius.toFixed(2)}</li>`;
+//     fahrenheitList.forEach((fahrenheit) => {
+//       // Do the math
+//       const celsius = ((fahrenheit - 32) * 5) / 9;
 
-      convertedTemperaturesContainer.innerHTML =
-        convertedTemperaturesContainer.innerHTML + liString;
-    });
-  }
-});
+//       // Render the result
+//       const liString = `<li class="number-item">${celsius.toFixed(2)}</li>`;
+
+//       convertedTemperaturesContainer.innerHTML =
+//         convertedTemperaturesContainer.innerHTML + liString;
+//     });
+//   }
+// });
