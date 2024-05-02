@@ -4,8 +4,10 @@
 
 import {
   CONVERT_TEMPERATURE_CONTAINER,
+  MESSAGE_ERROR_NOT_INTEGER,
   TEMPERATURES_INPUT,
 } from '../data/constants';
+import { replacePlaceholders } from '../utils/strings';
 import { convertTemperaturesHandler } from './convert-temperatures-handler';
 
 describe('convertTemperaturesHandler', () => {
@@ -30,5 +32,18 @@ describe('convertTemperaturesHandler', () => {
     expect(innerHTML).toContain('>-17.78<');
     expect(innerHTML).toContain('>0.00<');
     expect(innerHTML).toContain('>17.78<');
+  });
+
+  it('should show an alert when invalid input', () => {
+    // GIVEN
+    const input = '0 invalid 64';
+    const event = { target: { value: input } };
+    window.alert = jest.fn();
+    // WHEN
+    convertTemperaturesHandler(event);
+    // THEN
+    expect(window.alert).toHaveBeenCalledWith(
+      replacePlaceholders(MESSAGE_ERROR_NOT_INTEGER, input),
+    );
   });
 });

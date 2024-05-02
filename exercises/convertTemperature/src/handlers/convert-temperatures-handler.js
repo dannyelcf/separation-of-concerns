@@ -1,43 +1,65 @@
 import {
-  SPACE_REGEX,
   CONVERT_TEMPERATURE_CONTAINER,
   MESSAGE_ERROR_NOT_INTEGER,
 } from '../data/constants.js';
+import { fahrenheitToCelcius } from '../logic/convert-temperatures.js';
+import { parseToNumberArray } from '../utils/parsers.js';
 import { replacePlaceholders } from '../utils/strings.js';
+import { containsOnlyNumbersAndSpaces } from '../utils/validators.js';
 
-export const convertTemperaturesHandler = (event) => {
-  //debugger; // each time the user changes the 'temperatures' input
-
+const prepareOutputContainer = () => {
   const convertedTemperaturesContainer = document.getElementById(
     CONVERT_TEMPERATURE_CONTAINER,
   );
-
-  // Erase previous content
   convertedTemperaturesContainer.innerHTML = '';
+  return convertedTemperaturesContainer;
+};
 
-  // Get the text input
-  const fahrenheitTextList = event.target.value;
+const renderOutputContainer = (outputContainer, celsiusList) => {
+  celsiusList.forEach((celsius) => {
+    const liString = `<li class="number-item">${celsius.toFixed(2)}</li>`;
+    outputContainer.innerHTML = outputContainer.innerHTML + liString;
+  });
+};
 
-  // Validade it
-  if (fahrenheitTextList) {
-    if (!/^[0-9\s]*$/.test(fahrenheitTextList)) {
-      window.alert(
-        replacePlaceholders(MESSAGE_ERROR_NOT_INTEGER, fahrenheitTextList),
-      );
-      return;
+const validateTextInput = (text) => {
+  if (!text) {
+    throw new Error();
+  }
+
+  if (!containsOnlyNumbersAndSpaces(text)) {
+    throw new Error(replacePlaceholders(MESSAGE_ERROR_NOT_INTEGER, text));
+  }
+};
+
+const convertTemperatures = (fahrenheitTextList) => {
+  validateTextInput(fahrenheitTextList);
+  const fahrenheitList = parseToNumberArray(fahrenheitTextList);
+  const celsiusList = fahrenheitList.map((fahrenheit) => {
+    return fahrenheitToCelcius(fahrenheit);
+  });
+  return celsiusList;
+};
+
+/**
+ * Add an 'change' event listener to the element whose id is 'temperatures'.
+ *
+ * @param {Event} event - the 'change' event.
+ */
+export const convertTemperaturesHandler = (event) => {
+  try {
+    // Input
+    const convertedTemperaturesContainer = prepareOutputContainer();
+
+    // Logic
+    const fahrenheitTextList = event.target.value;
+    const celsiusList = convertTemperatures(fahrenheitTextList);
+
+    // Output
+    renderOutputContainer(convertedTemperaturesContainer, celsiusList);
+  } catch (error) {
+    if (error.message) {
+      window.alert(error.message);
     }
-
-    // Sanitize it
-    const fahrenheitList = fahrenheitTextList.trim().split(SPACE_REGEX);
-    fahrenheitList.forEach((fahrenheit) => {
-      // Do the math
-      const celsius = ((fahrenheit - 32) * 5) / 9;
-
-      // Render the result
-      const liString = `<li class="number-item">${celsius.toFixed(2)}</li>`;
-
-      convertedTemperaturesContainer.innerHTML =
-        convertedTemperaturesContainer.innerHTML + liString;
-    });
   }
 };
