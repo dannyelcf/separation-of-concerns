@@ -1,4 +1,7 @@
-document
+import {MOUSE_USER_INTERFACE, MOUSE_MOVE, MOUSE_POSITION} from "../data/constants";
+import './listener.js'
+
+/*document
   .getElementById('user-interface')
   .addEventListener('mousemove', (event) => {
     debugger;
