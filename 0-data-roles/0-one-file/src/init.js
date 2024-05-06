@@ -1,22 +1,22 @@
 debugger; // once when the program is initialized
 
-const state = {
+/*const state = {
   currentNumber: 0,
   allNumbers: [],
-};
+};*/
 
 // ==== the user can add a new number to state ====
 
-document.getElementById('next-number').addEventListener('change', (event) => {
+document.getElementById(EVENTS.NEXT_NUMBER_CHANGE).addEventListener('change', (event) => {
   debugger; // each time the user changes the 'next-number' input
-
+/*
   // --- read the user's input ---
   const inputValue = event.target.value;
   const nextNumber = Number(inputValue);
 
   // --- update state ---
   state.allNumbers.push(nextNumber);
-  state.currentNumber = state.allNumbers.at(-1);
+  state.currentNumber = state.allNumbers.at(-1);*/
 
   // --- update UI ---
 
@@ -24,14 +24,14 @@ document.getElementById('next-number').addEventListener('change', (event) => {
   const liString = `<li class="number-item">${state.currentNumber}</li>`;
 
   // add the new item to the history
-  const backwardsContainer = document.getElementById('number-history');
+  const backwardsContainer = document.getElementById(EVENTS.MOUSE_OVER_HISTORY);
   backwardsContainer.innerHTML = liString + backwardsContainer.innerHTML;
 });
 
 // ==== the user can change the input's value ====
 
 document
-  .getElementById('number-history')
+  .getElementById(EVENTS.MOUSE_OVER_HISTORY)
   .addEventListener('mouseover', (event) => {
     debugger; // each time the user moves the mouse over 'number-history'
 
@@ -48,5 +48,5 @@ document
     state.currentNumber = userNumber;
 
     // update the UI
-    document.getElementById('next-number').value = state.currentNumber;
+    document.getElementById(EVENTS.NEXT_NUMBER_CHANGE).value = state.currentNumber;
   });

@@ -1,4 +1,4 @@
-import { reverseAndUpper } from './utils.js';
+import { reverseAndUpper } from './util.js';
 
 describe('reverseAndUpper: reverses a string and upper-cases all the letters', () => {
   it('"lower-case letters"', () => {
