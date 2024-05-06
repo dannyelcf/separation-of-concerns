@@ -1,4 +1,8 @@
-document.getElementById('average-evens').addEventListener('click', () => {
+import { AVERAGE_OF_EVENS } from '../data/constants.js';
+import './listener.js'
+//document.getElementById(AVERAGE_OF_EVENS).addEventListener('click', 
+
+/*() => {
   // read & process user input
   const allNumbers = [];
   let acceptingInput = true;
@@ -32,3 +36,4 @@ document.getElementById('average-evens').addEventListener('click', () => {
   const message = `average of all evens: ${average}`;
   alert(message);
 });
+*/
