@@ -1,4 +1,7 @@
-document.getElementById('replacing').addEventListener('click', () => {
+import { REPLACE_STRING } from "../data/constants.js";
+import './listener.js'
+
+/*document.getElementById(REPLACE_STRING).addEventListener('click', () => {
   debugger;
   // read & process user input
   const stringToReplacify = prompt('enter a string to replaceify');
