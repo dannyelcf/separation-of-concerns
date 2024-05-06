@@ -1,4 +1,4 @@
-import { typeCaster } from './utils.js';
+import { typeCaster } from './util.js';
 
 describe('typeCaster: converts values to string, number or boolean', () => {
   describe('correctly casts valid types', () => {
