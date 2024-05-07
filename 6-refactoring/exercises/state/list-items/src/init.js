@@ -1,4 +1,15 @@
-const bulletPoint = '*'; // data to refactor out of this file
+import { setupEventListener } from './listeners.js';
+
+// This is where you would initialize your application
+// For example, setting up initial state or performing any setup tasks
+
+// Call the function to set up event listeners
+setupEventListener();
+
+
+
+
+/*const bulletPoint = '*'; // data to refactor out of this file
 
 document.getElementById('list-them').addEventListener('click', () => {
   // read & process user input
@@ -22,4 +33,4 @@ document.getElementById('list-them').addEventListener('click', () => {
   // communicate result to user
   const message = `all items:${stringList}`;
   alert(message);
-});
+});*/
