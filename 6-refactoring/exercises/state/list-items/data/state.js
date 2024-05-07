@@ -1,1 +1,7 @@
-export const state = _;
+
+
+
+export const state = {
+    bulletPoint: '*'
+  };
+  

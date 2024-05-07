@@ -1,7 +1,7 @@
-import { TYPE_USER_ACTION , TYPE_CASTED_VALUE} from "../data/constants";
-import './listener.js';
 
+import { listeners } from './listener.js';
 
+listeners();
 
 /*document.getElementById(TYPE_USER_ACTION ).addEventListener('click', 
 (event) => {

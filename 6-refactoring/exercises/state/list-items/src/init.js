@@ -1,4 +1,11 @@
-const bulletPoint = '*'; // data to refactor out of this file
+import './listener';
+
+
+//console.log(state.bulletPoint); // Output: '*'
+
+
+
+/*const bulletPoint = '*'; // data to refactor out of this file
 
 document.getElementById('list-them').addEventListener('click', () => {
   // read & process user input
@@ -22,4 +29,4 @@ document.getElementById('list-them').addEventListener('click', () => {
   // communicate result to user
   const message = `all items:${stringList}`;
   alert(message);
-});
+});*/
