@@ -15,9 +15,6 @@ for (const array of arrayOfArrays) {
         td.innerText = element;
         tr.appendChild(td);
     }
-table.appendChild(tr);
   }
-
-  return table;
+return table;
 };
-
