@@ -1,4 +1,4 @@
-import {MOUSE_USER_INTERFACE, MOUSE_MOVE, MOUSE_POSITION} from "../data/constants";
+
 import './listener.js' 
 /*document
   .getElementById(MOUSE_USER_INTERFACE)

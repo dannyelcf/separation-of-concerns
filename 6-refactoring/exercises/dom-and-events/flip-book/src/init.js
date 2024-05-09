@@ -1,5 +1,5 @@
-import {REVERSE_INPUT,REVERSED_OUTPUT,KEY_UP} from "../data/constants";
-import './listener.js' 
+import { REVERSE_INPUT, REVERSED_OUTPUT, KEY_UP } from '../data/constants';
+import './listener.js';
 // listener//
 
 // document.get... addEventListener('typeEvent', handler)

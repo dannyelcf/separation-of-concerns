@@ -8,16 +8,22 @@
  * @param {string} [mainTextColor='black'] - the color of the main text
  * @returns {HTMLDetailsElement}
  */
-export const info = (caption, mainText, id = 'details', captionColor = 'black',mainTextColor= 'black') => {
+export const info = (
+  caption,
+  mainText,
+  id = 'details',
+  captionColor = 'black',
+  mainTextColor = 'black',
+) => {
   const detailsEl = document.createElement('details');
   detailsEl.id = id;
-  
+
   const summaryEl = document.createElement('summary');
-  summaryEl.textContent = summary ;
+  summaryEl.textContent = summary;
   summaryEl.style.color = captionColor;
 
   const pEl = document.createElement('p');
-  pEl.textContent = mainText ;
+  pEl.textContent = mainText;
   pEl.style.color = mainTextColor;
 
   detailsEl.appendChild(summaryEl);

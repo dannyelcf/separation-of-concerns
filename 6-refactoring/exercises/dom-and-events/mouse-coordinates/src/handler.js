@@ -6,9 +6,9 @@ export const showMouseCoordinates = (event) => {
         const xValue = event.pageX;
         const yValue = event.pageY;
     
-        // execute core logic
-        const formattedCoordinates = 'X: ' + xValue + '\nY: ' + yValue;
-    
+        var formattedCoordinates = formatCoordinates(xValue,yValue);
+        
+        
         // render result for user
         document.getElementById(MOUSE_POSITION).innerHTML = formattedCoordinates;
     
