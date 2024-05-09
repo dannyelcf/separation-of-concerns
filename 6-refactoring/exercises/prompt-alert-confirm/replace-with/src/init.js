@@ -1,9 +1,11 @@
-document.getElementById('replacing').addEventListener('click', () => {
+import { REPLACE_STRING } from "../data/constants";
+import './listener';
+
+/*document.getElementById(REPLACE_STRING).addEventListener('click', () => {
   debugger;
   // read & process user input
   const stringToReplacify = prompt('enter a string to replaceify');
   if (stringToReplacify === null) {
-    alert('good bye');
     return;
   }
 
@@ -39,4 +41,4 @@ document.getElementById('replacing').addEventListener('click', () => {
 
   // communicate result to user
   alert(`${stringToReplacify}\n${newString}`);
-});
+});*/
