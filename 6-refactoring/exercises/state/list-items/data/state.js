@@ -1,7 +1,3 @@
-
-
-
 export const state = {
-    bulletPoint: '*'
-  };
-  
+  bulletPoint: '*',
+};

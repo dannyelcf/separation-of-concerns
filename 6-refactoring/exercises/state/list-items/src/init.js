@@ -1,9 +1,6 @@
 import './listener';
 
-
 //console.log(state.bulletPoint); // Output: '*'
-
-
 
 /*const bulletPoint = '*'; // data to refactor out of this file
 
