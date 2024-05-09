@@ -1,0 +1,1 @@
+export const AVERAGE_OF_EVEN_NUMBERS = 'average-evens';

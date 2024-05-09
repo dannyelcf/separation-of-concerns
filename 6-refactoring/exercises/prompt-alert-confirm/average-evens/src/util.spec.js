@@ -1,4 +1,4 @@
-import { averageEvens } from './utils.js';
+import { averageEvens } from './util.js';
 
 describe('averageEvens: averages all even numbers in an array', () => {
   describe('averageEvens: correctly averages all even numbers', () => {
