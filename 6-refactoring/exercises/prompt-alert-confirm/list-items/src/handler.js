@@ -13,11 +13,7 @@ export const listHandler = () => {
           }
         }
       
-        // execute core logic
-        let stringList = '';
-        for (const input of allInputs) {
-          stringList += `\n- ${input}`;
-        }
+        const stringList = list(allInputs);
       
         // communicate result to user
         const message = `all items:${stringList}`;
