@@ -8,20 +8,7 @@ export const capSwapHandler = () => {
           userInput = prompt('enter a string to cap-swap');
         }
       
-        // execute core logic
-        const capSwapped = userInput
-          .split('')
-          .map((str) => {
-            const charCode = str.charCodeAt(0);
-            if (64 < charCode && charCode < 91) {
-              return String.fromCharCode(charCode + 32);
-            } else if (96 < charCode && charCode < 123) {
-              return String.fromCharCode(charCode - 32);
-            } else {
-              return str;
-            }
-          })
-          .join('');
+        const capSwapped = capSwap(userInput);
       
         // communicate result to user
         alert(capSwapped);
