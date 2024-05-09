@@ -1,4 +1,4 @@
-import { capSwap } from './utils.js';
+import { capSwap } from './util.js';
 
 describe('capSwap: makes uppercase lowercase, and lowercase uppercase', () => {
   it('returns an empty string for an empty string', () => {

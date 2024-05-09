@@ -1,4 +1,7 @@
-document.getElementById('swap-button').addEventListener('click', () => {
+import { CAP_SWAP_BUTTON } from "../data/constants";
+import './listener';
+
+document.getElementById(CAP_SWAP_BUTTON).addEventListener('click', () => {
   // read & process user input
   let userInput = null;
   while (userInput === null) {
