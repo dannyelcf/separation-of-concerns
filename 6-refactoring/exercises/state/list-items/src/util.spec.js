@@ -26,7 +26,7 @@ describe('list: generates a list string from an array of strings', () => {
   describe('list: uses arguments correctly', () => {
     it('does not modify the array argument', () => {
       const arg = ['a', 'b', 'c', 'd'];
-      list(arg);
+      list(arg, ',');
       expect(arg).toEqual(['a', 'b', 'c', 'd']);
     });
   });

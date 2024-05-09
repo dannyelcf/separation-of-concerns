@@ -13,6 +13,6 @@ export const list = (arr, startNum = 1) => {
     liEl.innerText = string;
     olEl.appendChild(liEl);
   }
-  
+
   return olEl;
 };
