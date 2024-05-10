@@ -8,16 +8,16 @@ export const gameBoard = (arrayOfArrays) => {
     console.log(arrayOfArrays)
     const table = document.createElement('table');
 
-    for (const array of arrayOfArrays){
-      console.log(array);
+    for (const row of arrayOfArrays){
       const tr = document.createElement('tr');
-        for (const element of array){
+      table.appendChild(tr);
+        for (const column of row){
             console.log(element);
             const td = document.createElement('td');
-            td.innerText = element ;
+            td.innerText = column ;
             tr.appendChild(td);
         }
-        table.appendChild(tr);
+        
     }
     return table;
 };
