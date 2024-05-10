@@ -29,6 +29,8 @@ export const replaceWithHandler = () => {
           alert(`"${newChar}" is not a single character`);
           return;
         }
+
+        const newString = replaceWith(stringToReplacify, oldChar, newChar);
       
         // communicate result to user
         alert(`${stringToReplacify}\n${newString}`);

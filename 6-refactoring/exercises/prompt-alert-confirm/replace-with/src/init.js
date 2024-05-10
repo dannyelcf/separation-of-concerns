@@ -1,4 +1,4 @@
-import { REPLACE_STRING } from "../data/constants.js";
+
 import './listener.js'
 
 /*document.getElementById(REPLACE_STRING).addEventListener('click', () => {
