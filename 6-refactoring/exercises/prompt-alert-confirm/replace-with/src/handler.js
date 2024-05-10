@@ -30,16 +30,6 @@ export const replaceWithHandler = () => {
           return;
         }
       
-        // execute core logic
-        let newString = '';
-        for (const char of stringToReplacify) {
-          if (char === oldChar) {
-            newString += newChar;
-          } else {
-            newString += char;
-          }
-        }
-      
         // communicate result to user
         alert(`${stringToReplacify}\n${newString}`);
       }

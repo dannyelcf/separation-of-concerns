@@ -31,6 +31,7 @@ import './listener.js'
   }
 
   // execute core logic
+
   let newString = '';
   for (const char of stringToReplacify) {
     if (char === oldChar) {
@@ -42,4 +43,4 @@ import './listener.js'
 
   // communicate result to user
   alert(`${stringToReplacify}\n${newString}`);
-});
+});*/
