@@ -1,0 +1,1 @@
+export const CAP_SWAP_BUTTON = 'swap-button';
