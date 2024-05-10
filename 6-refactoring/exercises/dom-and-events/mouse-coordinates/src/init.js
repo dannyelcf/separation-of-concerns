@@ -1,4 +1,7 @@
-document
+
+import './listener.js'
+
+/*document
   .getElementById('user-interface')
   .addEventListener('mousemove', (event) => {
     debugger;
@@ -16,4 +19,4 @@ document
     console.log('\n--- new coordinates ---');
     console.log('x:', xValue);
     console.log('y:', yValue);
-  });
+  });*/
