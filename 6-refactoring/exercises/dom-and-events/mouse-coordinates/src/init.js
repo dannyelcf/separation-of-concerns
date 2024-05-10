@@ -1,4 +1,4 @@
-import {MOUSE_USER_INTERFACE, MOUSE_MOVE, MOUSE_POSITION} from "../data/constants";
+
 import './listener.js'
 
 /*document
@@ -19,4 +19,4 @@ import './listener.js'
     console.log('\n--- new coordinates ---');
     console.log('x:', xValue);
     console.log('y:', yValue);
-  });
+  });*/
