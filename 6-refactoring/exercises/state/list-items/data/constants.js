@@ -1,0 +1,1 @@
+export const LIST_ALL_OF_THEM = 'list-them';
