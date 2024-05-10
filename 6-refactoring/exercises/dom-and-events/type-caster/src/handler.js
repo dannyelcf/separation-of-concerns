@@ -8,17 +8,7 @@ export const castTheValue = (event) => {
     const stringToCast = form.value.value;
   
     // execute core logic
-    let newValue;
-    if (intendedType === 'string') {
-      newValue = String(stringToCast);
-    } else if (intendedType === 'number') {
-      newValue = Number(stringToCast);
-    } else if (intendedType === 'boolean') {
-      newValue = Boolean(stringToCast);
-    } else {
-      newValue = undefined;
-    }
-  
+    const newValue  = typeCaster(stringToCast, intendedType);
     // communicate result to user
     document.getElementById(TYPE_CASTED_VALUE).innerHTML =
       typeof newValue + ': ' + newValue;
