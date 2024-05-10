@@ -1,4 +1,9 @@
-document.getElementById('user-action').addEventListener('click', (event) => {
+
+import './listener.js'
+
+/*document.getElementById(TYPE_USER_ACTION ).addEventListener('click', 
+
+(event) => {
   debugger;
   // read & process user input
   const form = event.target.form;
@@ -18,7 +23,7 @@ document.getElementById('user-action').addEventListener('click', (event) => {
   }
 
   // communicate result to user
-  document.getElementById('casted-value').innerHTML =
+  document.getElementById(TYPE_CASTED_VALUE).innerHTML =
     typeof newValue + ': ' + newValue;
 
   // log action for developers
@@ -26,4 +31,4 @@ document.getElementById('user-action').addEventListener('click', (event) => {
   console.log('stringToCast:', stringToCast);
   console.log('intendedType:', intendedType);
   console.log('newValue:', newValue);
-});
+});*/
