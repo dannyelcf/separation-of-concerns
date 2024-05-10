@@ -1,4 +1,4 @@
-import { LIST_THINGS } from "../data/constants.js";
+
 import './listener.js'
 
 /*document.getElementById( LIST_THINGS).addEventListener('click', () => {
