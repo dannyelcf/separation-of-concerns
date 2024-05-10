@@ -6,15 +6,13 @@
  */
 export const gameBoard = (arrayOfArrays) => {
 const table = document.createElement('table');
-
-for (const array of arrayOfArrays) {
-    const tr = document.createElement('tr');
-    table.appendChild(tr);
-    for (const element of array) {
-        const td = document.createElement('td');
-        td.innerText = element;
-        tr.appendChild(td);
-    }
+for (const row of arrayOfArrays) {
+  const tr = document.createElement('tr');
+  table.appendChild(tr);
+  for (const column of row) {
+      const td = document.createElement('td');
+      td.innerText = column;
+      tr.appendChild(td);
   }
-return table;
-};
+} return table;
+}
