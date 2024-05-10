@@ -1,1 +1,9 @@
-export const state = _;
+
+const state = {
+    data: {
+      noCopies: [],
+    }
+  };
+  
+export default state;
+  
