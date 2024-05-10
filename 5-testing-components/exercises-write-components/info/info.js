@@ -12,7 +12,7 @@ export const info = (caption, mainText, id = captionColor = 'default', mainTextC
   detailsEl.id = id; 
   console.log (detailsEl);
 
-  const summaryEl = document.createElement('summery');
+  const summaryEl = document.createElement('summary');
   summaryEl.textContentCaption = caption;
   summaryEl.style.color = captionColor;
 

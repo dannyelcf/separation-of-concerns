@@ -6,7 +6,7 @@ import {
 } from '../constants.js';
 export const convertedTemperature = (fahrenheitTextList) => {
   if (!/^[0-9\s]*$/.test(fahrenheitTextList)) {
-    window.alert(MESSAGE_ERROR_NOT_INTEGER);
+    window.alert(MESSAGE_ERROR_NOT_INTEGER.replace('%S', fahrenheitTextList));
   }
   // Sanitize it
   const fahrenheitList = fahrenheitTextList.trim().split(SPACE);
