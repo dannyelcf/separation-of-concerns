@@ -1,4 +1,7 @@
-document.getElementById('replacing').addEventListener('click', () => {
+
+import './listener.js'
+
+/*document.getElementById(REPLACE_STRING).addEventListener('click', () => {
   debugger;
   // read & process user input
   const stringToReplacify = prompt('enter a string to replaceify');
@@ -28,6 +31,7 @@ document.getElementById('replacing').addEventListener('click', () => {
   }
 
   // execute core logic
+
   let newString = '';
   for (const char of stringToReplacify) {
     if (char === oldChar) {
@@ -39,4 +43,4 @@ document.getElementById('replacing').addEventListener('click', () => {
 
   // communicate result to user
   alert(`${stringToReplacify}\n${newString}`);
-});
+});*/

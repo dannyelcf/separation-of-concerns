@@ -1,4 +1,4 @@
-import { replaceWith } from './utils.js';
+import { replaceWith } from './util.js';
 
 describe('replaceWith: replaces characters', () => {
   it('replaces nothing in an empty string', () => {
