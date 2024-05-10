@@ -21,15 +21,8 @@ export const averageEvensHandler = () => {};
     }
   
     // execute core logic
-    let howManyEvens = 0;
-    let sumOfEvens = 0;
-    for (const num of allNumbers) {
-      if (num % 2 === 0) {
-        sumOfEvens = sumOfEvens + num;
-        howManyEvens = howManyEvens + 1;
-      }
-    }
-    const average = howManyEvens === 0 ? 0 : sumOfEvens / howManyEvens;
+   
+    const average = averageEvens(allNumbers);
   
     // communicate result to user
     const message = `average of all evens: ${average}`;
