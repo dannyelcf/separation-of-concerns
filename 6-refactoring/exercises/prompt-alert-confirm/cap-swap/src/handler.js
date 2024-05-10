@@ -1,4 +1,4 @@
-import { capSwap } from './utils.js';
+import { capSwap } from './util.js';
 
 export const capSwapHandler = () => {};
 () => {
