@@ -1,10 +1,10 @@
-import { saveNoCopies } from './utils.js';
+import { saveNoCopies } from './util.js';
 
 describe('saveNoCopies: ', () => {
   describe('adds a new items that are not in the array', () => {
     it('adds a "d" if there was not a "d"', () => {
       const expected = ['a', 'b', 'c', 'd'];
-      const actual = saveNoCopies(['a', 'b', 'c'], 'd');
+      const actual = saveNoCopies('d'); // Pass the new item directly
       expect(actual).toEqual(expected);
     });
     it('adds a "z" if there was not a "z"', () => {
@@ -26,7 +26,8 @@ describe('saveNoCopies: ', () => {
     });
     it('does not add entries that are at the end', () => {
       const expected = ['a', 'b', 'c'];
-      const actual = saveNoCopies(['a', 'b', 'c'], 'c');
+      saveNoCopies(['a', 'b', 'c']);
+      const actual = saveNoCopies('c');
       expect(actual).toEqual(expected);
     });
   });
