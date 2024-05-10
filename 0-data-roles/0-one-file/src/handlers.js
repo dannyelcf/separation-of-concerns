@@ -1,5 +1,5 @@
-import { INITIAL_STATE, EVENTS, HTML_CLASSES } from './constants.js';
-const handlers = (EVENTS) => {
+import { INITIAL_STATE, EVENTS, HTML_CLASSES } from './data/constants.js';
+const handlers = (event) => {
     const backwardsContainer = document.getElementById(EVENTS.MOUSE_OVER_HISTORY);
 
    /*const eventsNextNumberChange = document.getElementById(EVENTS.NEXT_NUMBER_CHANGE,);
@@ -8,13 +8,18 @@ const handlers = (EVENTS) => {
 const eventsMouseOverHistory = document.getElementById(EVENTS.MOUSE_OVER_HISTORY,);
     // Handler logic for when the user moves the mouse over 'number-history'
 */
-    const targetText = EVENTS.target.innerText;
+const nextNumber = Number(inputValue);
+
+// --- update state ---
+state.allNumbers.push(nextNumber);
+state.currentNumber = state.allNumbers.at(-1);
+    const targetText = event.target.innerText;
 
     backwardsContainer.innerHTML = liString + backwardsContainer.innerHTML;
 
-  if (EVENTS.target.nodeName !== 'LI') {
+  if (event.target.nodeName !== 'LI') {
     return;
   };
 
-  const liString = `<li class="number-item">${state.currentNumber}</li>`;s
+  const liString = `<li class="number-item">${state.currentNumber}</li>`;
 };

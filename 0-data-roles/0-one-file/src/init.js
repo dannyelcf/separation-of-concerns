@@ -1,4 +1,6 @@
-debugger; // once when the program is initialized
+import './listeners.js'
+
+/*debugger; // once when the program is initialized
 
 /*const state = {
   currentNumber: 0,
@@ -7,8 +9,8 @@ debugger; // once when the program is initialized
 
 // ==== the user can add a new number to state ====
 
-document.getElementById(EVENTS.NEXT_NUMBER_CHANGE).addEventListener('change', (event) => {
-  debugger; // each time the user changes the 'next-number' input
+//document.getElementById(EVENTS.NEXT_NUMBER_CHANGE).addEventListener('change', (event) => {
+  //debugger; // each time the user changes the 'next-number' input
 /*
   // --- read the user's input ---
   const inputValue = event.target.value;
@@ -21,7 +23,7 @@ document.getElementById(EVENTS.NEXT_NUMBER_CHANGE).addEventListener('change', (e
   // --- update UI ---
 
   // create new HTML string
-  const liString = `<li class="number-item">${state.currentNumber}</li>`;
+ /* const liString = `<li class="number-item">${state.currentNumber}</li>`;
 
   // add the new item to the history
   const backwardsContainer = document.getElementById(EVENTS.MOUSE_OVER_HISTORY);
@@ -50,3 +52,4 @@ document
     // update the UI
     document.getElementById(EVENTS.NEXT_NUMBER_CHANGE).value = state.currentNumber;
   });
+*/
