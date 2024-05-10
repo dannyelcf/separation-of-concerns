@@ -1,7 +1,3 @@
-import { LIST_ALL_OF_THEM } from "../data/constants.js";
-import './listener.js';
-
-/*
 const bulletPoint = '*'; // data to refactor out of this file
 
 document.getElementById('list-them').addEventListener('click', () => {
