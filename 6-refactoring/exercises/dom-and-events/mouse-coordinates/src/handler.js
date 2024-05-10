@@ -6,7 +6,7 @@ export const showMouseCoordinates = (event) => {
         const xValue = event.pageX;
         const yValue = event.pageY;
     
-        var formattedCoordinates = formatCoordinates(xValue,yValue);
+        const formattedCoordinates = formatCoordinates(xValue,yValue);
         
         
         // render result for user
