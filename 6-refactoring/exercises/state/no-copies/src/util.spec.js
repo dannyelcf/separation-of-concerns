@@ -1,6 +1,6 @@
-import { saveNoCopies } from './utils.js';
+import { saveNoCopies } from './util.js';
 
-describe('saveNoCopies: ', () => {
+describe('saveNoCopies: ', (userInput) => {
   describe('adds a new items that are not in the array', () => {
     it('adds a "d" if there was not a "d"', () => {
       const expected = ['a', 'b', 'c', 'd'];

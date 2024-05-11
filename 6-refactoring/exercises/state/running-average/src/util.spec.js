@@ -1,4 +1,4 @@
-import { average } from './utils.js';
+import { average } from './util.js';
 
 describe('average: computes the average of an array of numbers', () => {
   describe('average: correctly computes averages', () => {
