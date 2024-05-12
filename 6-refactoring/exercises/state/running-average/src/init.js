@@ -1,5 +1,8 @@
+import listener from "./listener.js";
+
+listener();
 // data to refactor out of this file
-const data = {
+/*const data = {
   average: 0,
   numbers: [],
 };
@@ -29,4 +32,4 @@ document.getElementById('add-to-average').addEventListener('click', () => {
 
   // log interaction
   console.log(data);
-});
+});*/
