@@ -13,13 +13,13 @@
 
       import { classyHeader } from './classy-header.js';
 
-      showComponentTestCase('an H3 with text: "hello", and no classes');
+      showComponentTestCase('an H3 with text: "hello", and no classes', classyHeader, 3, 'hello');
 
-      showComponentTestCase('an H1 with text: "good bye", and two classes');
+      showComponentTestCase('an H1 with text: "good bye", and two classes', classyHeader, 1, 'good bye' ,['class1', 'class2']);
 
-      showComponentTestCase('does not allow headers greater than 6');
+      showComponentTestCase('does not allow headers greater than 6', classyHeader, 6);
 
-      showComponentTestCase('does not allow headers less than 1');
+      showComponentTestCase('does not allow headers less than 1', classyHeader, 1);
     </script>
   </body>
 </html>
