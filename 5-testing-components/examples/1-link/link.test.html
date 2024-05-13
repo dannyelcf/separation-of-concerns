@@ -6,18 +6,19 @@
   </head>
 
   <body>
+    <a href="https://www.google.com/" target="_blank">TEST Google</a>
     <script type="module">
       import { showComponentTestCase } from '/lib/show-component-test-case.js';
 
       import { link } from './link.js';
 
       showComponentTestCase(
-        'open google in a new tab (default target)',
-        link,
-        'google it',
+        'open google in a new tab (default target)',    // text
+        link,                                           // component also called function
+        'google it',                                    // arguments test for the components
         'https://www.google.com/',
       );
-
+    
       showComponentTestCase(
         'open a pre-defined search in a new tab',
         link,

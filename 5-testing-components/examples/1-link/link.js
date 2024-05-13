@@ -9,6 +9,7 @@
  * @returns {HTMLAnchorElement} a rendered anchor element
  */
 export const link = (text, url, target = '_blank') => {
+  // <a href="https://www.google.com/">TEST Google</a>
   const aEl = document.createElement('a');
   aEl.href = url;
   aEl.target = target;
