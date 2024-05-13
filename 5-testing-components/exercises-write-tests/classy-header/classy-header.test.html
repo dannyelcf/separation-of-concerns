@@ -17,9 +17,15 @@
 
       showComponentTestCase('an H1 with text: "good bye", and two classes', classyHeader, 1, 'good bye' ,['class1', 'class2']);
 
-      showComponentTestCase('does not allow headers greater than 6', classyHeader, 6);
-
-      showComponentTestCase('does not allow headers less than 1', classyHeader, 1);
+      showComponentTestCase('does not allow headers greater than 6', () => {
+      // This test case should throw an error, so no need to pass arguments
+      classyHeader(7, 'test');
+    });
+    
+    showComponentTestCase('does not allow headers less than 1', () => {
+      // This test case should throw an error, so no need to pass arguments
+      classyHeader(0, 'test');
+    });
     </script>
   </body>
 </html>
